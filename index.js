@@ -23,7 +23,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const PORT = process.env.PORT || 3000;
+const PORT = 10000;
 
 const transporter = nodemailer.createTransport({
   host: 'sandbox.smtp.mailtrap.io',
