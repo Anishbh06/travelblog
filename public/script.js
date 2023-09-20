@@ -9,7 +9,7 @@ document.getElementById('emailForm').addEventListener('submit', function(event) 
   
     const email = document.getElementById('emails').value;
   
-    fetch('http://localhost:3000/submit', {
+    fetch('https://anivery.onrender.com/submit', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const email = document.getElementById('email').value;
     const message = document.getElementById('text').value;
   
-    fetch('http://localhost:3000/contact', {
+    fetch('https://anivery.onrender.com/contact', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

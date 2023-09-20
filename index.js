@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const cors = require("cors")
 const nodemailer = require('nodemailer');
 
 const app = express();
@@ -19,6 +20,7 @@ const EmailSchema = new mongoose.Schema({
 
 const Email = mongoose.model('Email', EmailSchema);
 
+app.use(cors())
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
